@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegóły produktu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!--Tytuł-->
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+        <div class="d-md-flex d-block flex-row mx-md-auto mx-0">
+            <a class="navbar-brand" th:href="@{/}">Magazyn</a>
+        </div>
+    </nav>
+
+    <!--Główna-->
+    <div class="container d-flex justify-content-center">
+        <!--Szczegóły produktu-->
+        <div class="card mb-5 mt-5" style="width: 500px;">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Szczegóły produktu</strong></h5>
+                <div th:each="detail: ${product}">
+                    <div class="mt-3 mb-3">
+                        <h6 class="card-subtitle text-muted">Nazwa</h6>
+                        <p th:text="${detail.name}"></p>
+                    <div>
+
+                    <div class="mt-3 mb-3">
+                        <h6 class="card-subtitle text-muted">Numer seryjny</h6>
+                        <p th:text="${detail.serialNumber}"></p>
+                    <div>
+
+                    <div class="mt-3 mb-3">
+                        <h6 class="card-subtitle text-muted">Ilość</h6>
+                        <p th:text="${detail.quantity}"></p>
+                    <div>
+
+                    <div class="mt-3 mb-3">
+                        <h6 class="card-subtitle text-muted">Cena</h6>
+                        <p th:text="${detail.price}"></p>
+                    <div>
+
+                    <div class="mt-3 mb-3">
+                        <h6 class="card-subtitle text-muted">Opis</h6>
+                        <p th:text="${detail.description}"></p>
+                    <div>
+                </div>
+
+                <a class="card-link" th:href="@{/}">Wróć</a>
+            <div>
+        </div>
+    </div>
+
+</body>
+</html>
