@@ -1,8 +1,7 @@
 # warehouse
-simple warehouse in java
+Simple warehouse app in Java
 
-clone project
-open in ItelliJ
-start the program
-get in http://localhost:8080 in your browser
-enjoy!
+1. Clone project
+2. Open in ItelliJ
+3. Start the program
+4. Get in http://localhost:8080 in your browser and enjoy!
